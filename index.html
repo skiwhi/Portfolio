@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
+        <h1>Привет, я начинающий верстальщик</h1>
+        <p>Создаю простые сайты и лендинги</p>
+    </header>
+    <section>
+        <h2>Мои работы</h2>
+        <p>Здесь будут примеры сайтов, которые я делал.</p>
+    </section>
+    <section>
+        <h2>Контакты</h2>
+        <p>Telegram: @ваш_логин</p>
+    </section>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Меняем иконку кнопки
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '☀️';
+            } else {
+                toggleButton.textContent = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
